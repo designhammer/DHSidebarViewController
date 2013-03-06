@@ -1,17 +1,17 @@
 //
-//  DHSlidebarLayoutView.m
+//  DHSidebarLayoutView.m
 //  ExerciseTimer
 //
 //  Created by Jay Roberts on 1/3/13.
 //  Copyright (c) 2013 DesignHammer. All rights reserved.
 //
 
-#import "DHSlidebarLayoutView.h"
+#import "DHSidebarLayoutView.h"
 
 #define kViewTagRoot 10000
 #define kViewTagSidebar 10001
 
-@implementation DHSlidebarLayoutView
+@implementation DHSidebarLayoutView
 
 - (id)initWithFrame:(CGRect)frame {
     if ( (self = [super initWithFrame:frame]) ) {

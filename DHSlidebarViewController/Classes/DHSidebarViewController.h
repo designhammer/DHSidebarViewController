@@ -1,5 +1,5 @@
 //
-//  DHSlidebarViewController.h
+//  DHSidebarViewController.h
 //  ExerciseTimer
 //
 //  Created by Jay Roberts on 1/3/13.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DHSlidebarViewController : UIViewController <UIGestureRecognizerDelegate>
+@interface DHSidebarViewController : UIViewController <UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) UIViewController* rootViewController;
 @property (nonatomic, strong) UIViewController* sidebarViewController;

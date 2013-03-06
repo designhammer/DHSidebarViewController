@@ -1,13 +1,13 @@
 //
 //  DHAppDelegate.m
-//  DHSlidebarViewController
+//  DHSidebarViewController
 //
 //  Created by Jay Roberts on 3/6/13.
 //  Copyright (c) 2013 DesignHammer. All rights reserved.
 //
 
 #import "DHAppDelegate.h"
-#import "DHSlidebarViewController.h"
+#import "DHSidebarViewController.h"
 
 @implementation DHAppDelegate
 
@@ -19,10 +19,10 @@
     UIViewController* rootViewController = [mainStoryboard instantiateInitialViewController];
     UIViewController* sidebarViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"SidebarViewController"];
 
-    DHSlidebarViewController* slidebarVC = [[DHSlidebarViewController alloc] initWithRootViewController:rootViewController
+    DHSidebarViewController* sidebarVC = [[DHSidebarViewController alloc] initWithRootViewController:rootViewController
                                                                                   sidebarViewController:sidebarViewController];
     
-    self.window.rootViewController = slidebarVC;
+    self.window.rootViewController = sidebarVC;
 
     [self.window makeKeyAndVisible];
     return YES;

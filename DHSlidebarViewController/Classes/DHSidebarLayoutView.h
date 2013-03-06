@@ -1,5 +1,5 @@
 //
-//  DHSlidebarLayoutView.h
+//  DHSidebarLayoutView.h
 //  ExerciseTimer
 //
 //  Created by Jay Roberts on 1/3/13.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DHSlidebarLayoutView : UIView
+@interface DHSidebarLayoutView : UIView
 
 @property (nonatomic, assign) float offset;
 @property (nonatomic, assign) float snapPosition;

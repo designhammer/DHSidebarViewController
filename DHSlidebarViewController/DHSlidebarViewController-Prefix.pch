@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'DHSlidebarViewController' target in the 'DHSlidebarViewController' project
+// Prefix header for all source files of the 'DHSidebarViewController' target in the 'DHSidebarViewController' project
 //
 
 #import <Availability.h>

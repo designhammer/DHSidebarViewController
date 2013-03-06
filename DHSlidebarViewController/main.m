@@ -1,6 +1,6 @@
 //
 //  main.m
-//  DHSlidebarViewController
+//  DHSidebarViewController
 //
 //  Created by Jay Roberts on 3/6/13.
 //  Copyright (c) 2013 DesignHammer. All rights reserved.

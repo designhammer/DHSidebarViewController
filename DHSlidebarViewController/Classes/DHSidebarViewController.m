@@ -1,19 +1,19 @@
 //
-//  DHSlidebarViewController.m
+//  DHSidebarViewController.m
 //  ExerciseTimer
 //
 //  Created by Jay Roberts on 1/3/13.
 //  Copyright (c) 2013 DesignHammer. All rights reserved.
 //
 
-#import "DHSlidebarViewController.h"
-#import "DHSlidebarLayoutView.h"
+#import "DHSidebarViewController.h"
+#import "DHSidebarLayoutView.h"
 #import <QuartzCore/QuartzCore.h>
 
 #define kViewTagRoot 10000
 #define kViewTagSidebar 10001
 
-@interface DHSlidebarViewController () {
+@interface DHSidebarViewController () {
     CGPoint _panOrigin;
     float _panStartingOffset;
     BOOL _sliding;
@@ -25,7 +25,7 @@
 
 @end
 
-@implementation DHSlidebarViewController
+@implementation DHSidebarViewController
 
 #pragma mark - Initialization
 
@@ -58,7 +58,7 @@
     
     [super loadView];
     
-    DHSlidebarLayoutView * layoutView = [[DHSlidebarLayoutView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
+    DHSidebarLayoutView * layoutView = [[DHSidebarLayoutView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
     self.view = layoutView;
     self.overlay.frame = self.rootViewController.view.frame;
 }
@@ -92,7 +92,7 @@
 //}
 
 -(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-    DHSlidebarLayoutView* layoutView = (DHSlidebarLayoutView*)self.view;
+    DHSidebarLayoutView* layoutView = (DHSidebarLayoutView*)self.view;
     layoutView.frame = [[UIScreen mainScreen] applicationFrame];
     layoutView.snapPosition = self.view.bounds.size.width - self.openOffset;
     if ([self isOpen]) {
@@ -100,17 +100,17 @@
     }
 }
 
-#pragma mark - DHSlidebarViewController Public Methods
+#pragma mark - DHSidebarViewController Public Methods
 
 -(BOOL)isOpen {
-    DHSlidebarLayoutView* layoutView = (DHSlidebarLayoutView*)self.view;
+    DHSidebarLayoutView* layoutView = (DHSidebarLayoutView*)self.view;
     float midpoint = layoutView.snapPosition / 2;
     return layoutView.offset > midpoint;
 }
 
 -(void)setOpenOffset:(float)openOffset {
     _openOffset = openOffset;
-    DHSlidebarLayoutView* layoutView = (DHSlidebarLayoutView*)self.view;
+    DHSidebarLayoutView* layoutView = (DHSidebarLayoutView*)self.view;
     layoutView.snapPosition = self.view.bounds.size.width - self.openOffset;
 }
 
@@ -214,7 +214,7 @@
         // Wait until open/close movement finsihes before allowing the state to be toggled
         return;
     }
-    DHSlidebarLayoutView* layoutView = (DHSlidebarLayoutView*)self.view;
+    DHSidebarLayoutView* layoutView = (DHSidebarLayoutView*)self.view;
     float midpoint = layoutView.snapPosition / 2;
     if (layoutView.offset < midpoint) {
         [self openSidebar];
@@ -224,7 +224,7 @@
 }
 
 - (void)openSidebar {
-    DHSlidebarLayoutView* layoutView = (DHSlidebarLayoutView*)self.view;
+    DHSidebarLayoutView* layoutView = (DHSidebarLayoutView*)self.view;
     [layoutView setOffset:layoutView.snapPosition animated:YES];
     
     if ([self.overlay superview] != self.rootViewController.view) {
@@ -243,7 +243,7 @@
 }
 
 - (void)closeSidebar {
-    DHSlidebarLayoutView* layoutView = (DHSlidebarLayoutView*)self.view;
+    DHSidebarLayoutView* layoutView = (DHSidebarLayoutView*)self.view;
     [layoutView setOffset:0 animated:YES];
     
     [UIView animateWithDuration:0.25
@@ -260,7 +260,7 @@
 }
 
 - (void)hideRootViewController {
-    DHSlidebarLayoutView* layoutView = (DHSlidebarLayoutView*)self.view;
+    DHSidebarLayoutView* layoutView = (DHSidebarLayoutView*)self.view;
     [layoutView setOffset:320 animated:YES];
 }
 
@@ -276,13 +276,13 @@
         case UIGestureRecognizerStateBegan:
         {
             _panOrigin = [gr translationInView:self.view];
-            DHSlidebarLayoutView* layoutView = (DHSlidebarLayoutView*)self.view;
+            DHSidebarLayoutView* layoutView = (DHSidebarLayoutView*)self.view;
             _panStartingOffset = layoutView.offset;
             break;
         }
         case UIGestureRecognizerStateChanged:
         {
-            DHSlidebarLayoutView* layoutView = (DHSlidebarLayoutView*)self.view;
+            DHSidebarLayoutView* layoutView = (DHSidebarLayoutView*)self.view;
 
             CGPoint p = [gr translationInView:self.view];
             float distance = p.x - _panOrigin.x;
@@ -295,7 +295,7 @@
         }
         case UIGestureRecognizerStateEnded:
         {
-            DHSlidebarLayoutView* layoutView = (DHSlidebarLayoutView*)self.view;
+            DHSidebarLayoutView* layoutView = (DHSidebarLayoutView*)self.view;
             
             CGPoint p = [gr translationInView:self.view];
             float distance = p.x - _panOrigin.x;

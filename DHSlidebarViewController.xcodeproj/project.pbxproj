@@ -16,8 +16,8 @@
 		A5E778E716E7A61300AEF8C2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A5E778E616E7A61300AEF8C2 /* Default.png */; };
 		A5E778E916E7A61300AEF8C2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5E778E816E7A61300AEF8C2 /* Default@2x.png */; };
 		A5E778EB16E7A61300AEF8C2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5E778EA16E7A61300AEF8C2 /* Default-568h@2x.png */; };
-		A5E778F616E7A84D00AEF8C2 /* DHSlidebarLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E778F316E7A84D00AEF8C2 /* DHSlidebarLayoutView.m */; };
-		A5E778F716E7A84D00AEF8C2 /* DHSlidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E778F516E7A84D00AEF8C2 /* DHSlidebarViewController.m */; };
+		A5E778F616E7A84D00AEF8C2 /* DHSidebarLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E778F316E7A84D00AEF8C2 /* DHSidebarLayoutView.m */; };
+		A5E778F716E7A84D00AEF8C2 /* DHSidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E778F516E7A84D00AEF8C2 /* DHSidebarViewController.m */; };
 		A5E778FA16E7A90300AEF8C2 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5E778F916E7A90300AEF8C2 /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -35,10 +35,10 @@
 		A5E778E616E7A61300AEF8C2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		A5E778E816E7A61300AEF8C2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A5E778EA16E7A61300AEF8C2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		A5E778F216E7A84D00AEF8C2 /* DHSlidebarLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSlidebarLayoutView.h; sourceTree = "<group>"; };
-		A5E778F316E7A84D00AEF8C2 /* DHSlidebarLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSlidebarLayoutView.m; sourceTree = "<group>"; };
-		A5E778F416E7A84D00AEF8C2 /* DHSlidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSlidebarViewController.h; sourceTree = "<group>"; };
-		A5E778F516E7A84D00AEF8C2 /* DHSlidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSlidebarViewController.m; sourceTree = "<group>"; };
+		A5E778F216E7A84D00AEF8C2 /* DHSidebarLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSidebarLayoutView.h; sourceTree = "<group>"; };
+		A5E778F316E7A84D00AEF8C2 /* DHSidebarLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSidebarLayoutView.m; sourceTree = "<group>"; };
+		A5E778F416E7A84D00AEF8C2 /* DHSidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSidebarViewController.h; sourceTree = "<group>"; };
+		A5E778F516E7A84D00AEF8C2 /* DHSidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSidebarViewController.m; sourceTree = "<group>"; };
 		A5E778F916E7A90300AEF8C2 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,10 +112,10 @@
 		A5E778F116E7A84D00AEF8C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				A5E778F216E7A84D00AEF8C2 /* DHSlidebarLayoutView.h */,
-				A5E778F316E7A84D00AEF8C2 /* DHSlidebarLayoutView.m */,
-				A5E778F416E7A84D00AEF8C2 /* DHSlidebarViewController.h */,
-				A5E778F516E7A84D00AEF8C2 /* DHSlidebarViewController.m */,
+				A5E778F216E7A84D00AEF8C2 /* DHSidebarLayoutView.h */,
+				A5E778F316E7A84D00AEF8C2 /* DHSidebarLayoutView.m */,
+				A5E778F416E7A84D00AEF8C2 /* DHSidebarViewController.h */,
+				A5E778F516E7A84D00AEF8C2 /* DHSidebarViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -197,8 +197,8 @@
 			files = (
 				A5E778E116E7A61300AEF8C2 /* main.m in Sources */,
 				A5E778E516E7A61300AEF8C2 /* DHAppDelegate.m in Sources */,
-				A5E778F616E7A84D00AEF8C2 /* DHSlidebarLayoutView.m in Sources */,
-				A5E778F716E7A84D00AEF8C2 /* DHSlidebarViewController.m in Sources */,
+				A5E778F616E7A84D00AEF8C2 /* DHSidebarLayoutView.m in Sources */,
+				A5E778F716E7A84D00AEF8C2 /* DHSidebarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +315,7 @@
 				A5E778F016E7A61300AEF8C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
