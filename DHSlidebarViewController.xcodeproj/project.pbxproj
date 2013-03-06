@@ -1,0 +1,288 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A5E778D516E7A61300AEF8C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E778D416E7A61300AEF8C2 /* UIKit.framework */; };
+		A5E778D716E7A61300AEF8C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E778D616E7A61300AEF8C2 /* Foundation.framework */; };
+		A5E778D916E7A61300AEF8C2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E778D816E7A61300AEF8C2 /* CoreGraphics.framework */; };
+		A5E778DF16E7A61300AEF8C2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5E778DD16E7A61300AEF8C2 /* InfoPlist.strings */; };
+		A5E778E116E7A61300AEF8C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E778E016E7A61300AEF8C2 /* main.m */; };
+		A5E778E516E7A61300AEF8C2 /* DHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E778E416E7A61300AEF8C2 /* DHAppDelegate.m */; };
+		A5E778E716E7A61300AEF8C2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A5E778E616E7A61300AEF8C2 /* Default.png */; };
+		A5E778E916E7A61300AEF8C2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5E778E816E7A61300AEF8C2 /* Default@2x.png */; };
+		A5E778EB16E7A61300AEF8C2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5E778EA16E7A61300AEF8C2 /* Default-568h@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A5E778D116E7A61300AEF8C2 /* DHSlidebarViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DHSlidebarViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5E778D416E7A61300AEF8C2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A5E778D616E7A61300AEF8C2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A5E778D816E7A61300AEF8C2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A5E778DC16E7A61300AEF8C2 /* DHSlidebarViewController-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DHSlidebarViewController-Info.plist"; sourceTree = "<group>"; };
+		A5E778DE16E7A61300AEF8C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A5E778E016E7A61300AEF8C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A5E778E216E7A61300AEF8C2 /* DHSlidebarViewController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DHSlidebarViewController-Prefix.pch"; sourceTree = "<group>"; };
+		A5E778E316E7A61300AEF8C2 /* DHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHAppDelegate.h; sourceTree = "<group>"; };
+		A5E778E416E7A61300AEF8C2 /* DHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHAppDelegate.m; sourceTree = "<group>"; };
+		A5E778E616E7A61300AEF8C2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		A5E778E816E7A61300AEF8C2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		A5E778EA16E7A61300AEF8C2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A5E778CE16E7A61300AEF8C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5E778D516E7A61300AEF8C2 /* UIKit.framework in Frameworks */,
+				A5E778D716E7A61300AEF8C2 /* Foundation.framework in Frameworks */,
+				A5E778D916E7A61300AEF8C2 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A5E778C816E7A61300AEF8C2 = {
+			isa = PBXGroup;
+			children = (
+				A5E778DA16E7A61300AEF8C2 /* DHSlidebarViewController */,
+				A5E778D316E7A61300AEF8C2 /* Frameworks */,
+				A5E778D216E7A61300AEF8C2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A5E778D216E7A61300AEF8C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5E778D116E7A61300AEF8C2 /* DHSlidebarViewController.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5E778D316E7A61300AEF8C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5E778D416E7A61300AEF8C2 /* UIKit.framework */,
+				A5E778D616E7A61300AEF8C2 /* Foundation.framework */,
+				A5E778D816E7A61300AEF8C2 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5E778DA16E7A61300AEF8C2 /* DHSlidebarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A5E778E316E7A61300AEF8C2 /* DHAppDelegate.h */,
+				A5E778E416E7A61300AEF8C2 /* DHAppDelegate.m */,
+				A5E778DB16E7A61300AEF8C2 /* Supporting Files */,
+			);
+			path = DHSlidebarViewController;
+			sourceTree = "<group>";
+		};
+		A5E778DB16E7A61300AEF8C2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A5E778DC16E7A61300AEF8C2 /* DHSlidebarViewController-Info.plist */,
+				A5E778DD16E7A61300AEF8C2 /* InfoPlist.strings */,
+				A5E778E016E7A61300AEF8C2 /* main.m */,
+				A5E778E216E7A61300AEF8C2 /* DHSlidebarViewController-Prefix.pch */,
+				A5E778E616E7A61300AEF8C2 /* Default.png */,
+				A5E778E816E7A61300AEF8C2 /* Default@2x.png */,
+				A5E778EA16E7A61300AEF8C2 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A5E778D016E7A61300AEF8C2 /* DHSlidebarViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5E778EE16E7A61300AEF8C2 /* Build configuration list for PBXNativeTarget "DHSlidebarViewController" */;
+			buildPhases = (
+				A5E778CD16E7A61300AEF8C2 /* Sources */,
+				A5E778CE16E7A61300AEF8C2 /* Frameworks */,
+				A5E778CF16E7A61300AEF8C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DHSlidebarViewController;
+			productName = DHSlidebarViewController;
+			productReference = A5E778D116E7A61300AEF8C2 /* DHSlidebarViewController.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A5E778C916E7A61300AEF8C2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DH;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = DesignHammer;
+			};
+			buildConfigurationList = A5E778CC16E7A61300AEF8C2 /* Build configuration list for PBXProject "DHSlidebarViewController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A5E778C816E7A61300AEF8C2;
+			productRefGroup = A5E778D216E7A61300AEF8C2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5E778D016E7A61300AEF8C2 /* DHSlidebarViewController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A5E778CF16E7A61300AEF8C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5E778DF16E7A61300AEF8C2 /* InfoPlist.strings in Resources */,
+				A5E778E716E7A61300AEF8C2 /* Default.png in Resources */,
+				A5E778E916E7A61300AEF8C2 /* Default@2x.png in Resources */,
+				A5E778EB16E7A61300AEF8C2 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5E778CD16E7A61300AEF8C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5E778E116E7A61300AEF8C2 /* main.m in Sources */,
+				A5E778E516E7A61300AEF8C2 /* DHAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A5E778DD16E7A61300AEF8C2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5E778DE16E7A61300AEF8C2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A5E778EC16E7A61300AEF8C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A5E778ED16E7A61300AEF8C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A5E778EF16E7A61300AEF8C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DHSlidebarViewController/DHSlidebarViewController-Prefix.pch";
+				INFOPLIST_FILE = "DHSlidebarViewController/DHSlidebarViewController-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A5E778F016E7A61300AEF8C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DHSlidebarViewController/DHSlidebarViewController-Prefix.pch";
+				INFOPLIST_FILE = "DHSlidebarViewController/DHSlidebarViewController-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A5E778CC16E7A61300AEF8C2 /* Build configuration list for PBXProject "DHSlidebarViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5E778EC16E7A61300AEF8C2 /* Debug */,
+				A5E778ED16E7A61300AEF8C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5E778EE16E7A61300AEF8C2 /* Build configuration list for PBXNativeTarget "DHSlidebarViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5E778EF16E7A61300AEF8C2 /* Debug */,
+				A5E778F016E7A61300AEF8C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A5E778C916E7A61300AEF8C2 /* Project object */;
+}
