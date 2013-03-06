@@ -46,6 +46,7 @@
         self.overlayOpacity = 0.2f;
         self.rootViewController = rootViewController;
         self.sidebarViewController = sidebarViewController;
+        self.openOffset = 55.0f;
         _sliding = NO;
     }
     return self;
@@ -89,13 +90,29 @@
 //-(void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
 //    self.view.frame = [[UIScreen mainScreen] applicationFrame];
 //}
-//
-//-(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-//    NSLog(@"setting bounds");
-//    self.view.frame = [[UIScreen mainScreen] applicationFrame];
-//}
+
+-(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    DHSlidebarLayoutView* layoutView = (DHSlidebarLayoutView*)self.view;
+    layoutView.frame = [[UIScreen mainScreen] applicationFrame];
+    layoutView.snapPosition = self.view.bounds.size.width - self.openOffset;
+    if ([self isOpen]) {
+        [self openSidebar];
+    }
+}
 
 #pragma mark - DHSlidebarViewController Public Methods
+
+-(BOOL)isOpen {
+    DHSlidebarLayoutView* layoutView = (DHSlidebarLayoutView*)self.view;
+    float midpoint = layoutView.snapPosition / 2;
+    return layoutView.offset > midpoint;
+}
+
+-(void)setOpenOffset:(float)openOffset {
+    _openOffset = openOffset;
+    DHSlidebarLayoutView* layoutView = (DHSlidebarLayoutView*)self.view;
+    layoutView.snapPosition = self.view.bounds.size.width - self.openOffset;
+}
 
 - (void)setRootViewController:(UIViewController *)rootViewController {
     // Bail if null
@@ -309,9 +326,8 @@
 }
 
 - (void)tapped:(UITapGestureRecognizer *)gr {
-    DHSlidebarLayoutView* layoutView = (DHSlidebarLayoutView*)self.view;
-    float midpoint = layoutView.snapPosition / 2;
-    if (layoutView.offset > midpoint) {
+
+    if ([self isOpen]) {
         [self closeSidebar];
     }
 }
