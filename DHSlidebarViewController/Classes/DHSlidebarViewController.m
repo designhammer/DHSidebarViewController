@@ -40,7 +40,7 @@
 
 - (id)initWithRootViewController:(UIViewController*)rootViewController sidebarViewController:(UIViewController*)sidebarViewController {
     if ( (self = self = [super initWithNibName:nil bundle:nil]) ) {
-        self.threshhold = 50.0f;
+        self.threshold = 50.0f;
         self.panningEnabled = YES;
         self.overlayColor = [UIColor blackColor];
         self.overlayOpacity = 0.2f;
@@ -300,9 +300,9 @@
             CGPoint p = [gr translationInView:self.view];
             float distance = p.x - _panOrigin.x;
 
-            float snapPosition = self.threshhold; // left side snap position
+            float snapPosition = self.threshold; // left side snap position
             if (distance < 0) { // right side snap position
-                snapPosition = layoutView.snapPosition - self.threshhold;
+                snapPosition = layoutView.snapPosition - self.threshold;
             }
 
             if (layoutView.offset < snapPosition) {

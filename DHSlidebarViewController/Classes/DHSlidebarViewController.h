@@ -13,7 +13,7 @@
 @property (nonatomic, strong) UIViewController* rootViewController;
 @property (nonatomic, strong) UIViewController* sidebarViewController;
 @property (nonatomic, assign) BOOL panningEnabled;
-@property (nonatomic, assign) float threshhold; // The distance the user must slide the root view from its resting position to trigger an open or close
+@property (nonatomic, assign) float threshold; // The distance the user must slide the root view from its resting position to trigger an open or close
 @property (nonatomic, assign) UIColor* overlayColor;
 @property (nonatomic, assign) float overlayOpacity;
 @property (nonatomic, assign) float openOffset; // The distance from the right screen edge where the root view will rest when open
