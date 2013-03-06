@@ -1,0 +1,91 @@
+# DHSidebarViewController
+
+DHSidebarViewController is sidebar navigation controller for iOS which supports responsive sliding gestures and custom views.
+
+It presents a root view controller which can be slid to the right by the user to display a sidebar view underneath. The sliding can be performed by a responsive pan gesture or by calling a method on the sidebar controller.
+
+<img src="/Users/jroberts/Desktop/dh-sidebar-example.png" alt="The Sidebar in action" />
+
+
+## Usage
+
+The DHSidebarViewController is intended to be the rootViewController of your application. Create it in applicationDidFinishLaunching and pass it a sidebarViewController and a rootViewController.
+
+    UIStoryboard* mainStoryboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
+    UIViewController* rootViewController = [mainStoryboard instantiateInitialViewController];
+    UIViewController* sidebarViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"SidebarViewController"];
+
+    DHSidebarViewController* sidebarVC = [[DHSidebarViewController alloc] initWithRootViewController:rootViewController sidebarViewController:sidebarViewController];
+    
+    self.window.rootViewController = sidebarVC;
+
+
+
+
+## Opening and Closing the sidebar
+
+The sidebar can be opened and closed with just a swipe gesture, however most apps will also want to include a dedicated button for this. 
+
+The simplest approach is to add a button to the root view controller which calls `toggleSidebar` on the sidebar view controller.
+
+If you need to explicitly set the sidebar to be open or closed you can call `openSidebar` and `closeSidebar` respectively.
+
+
+## Hiding and showing the root view controller
+
+Typically, some part of the rootViewController will always be visible at the right edge of the screen. However, sometimes you may wish to move it completely off of the screen temporarily so the user can focus on a task in the sidebar.
+
+This is easily accomplished. Calling `showRootViewController` will move the rootViewController completely off the right edge of the screen.
+
+Calling `hideRootViewController` will return it to the open position.
+
+An common use case for this would be having a tableView in the sidebar which the user can edit. When the user begins editing the tabeView call `hideRootViewController`. The user now has the full screen to work in, reorder items, etc. and is prevented from accidentally closing the sidebar.
+
+Then, when  he user stops editing, call `showRootViewController` to restore its original position.
+
+
+## Properties
+
+The sidebar controller is customizable. You can set the following properties:
+
+### panningEnabled
+
+If YES, the user will be able to open and close the sidebar by swiping the root view controller. 
+
+Default is YES.
+
+### threshold
+
+This is a float value that represents the distance in points that a user needs to swipe in order to commit the open or close gesture. 
+
+Try different values and see what feels best for your app. 
+
+Default is 50.
+
+### overlayColor and overlayOpactiy
+
+When the sidebar controller is open (the sidebar is showing) an overlay view is placed on top of the rootViewController. This view intercepts touches so the user can quickly tap to close the sidebar.
+
+overlayColor determines the color of this view and overlayOpacity determines it's alpha level when shown. The sidebar controller will animate the opacity as needed.
+
+The overlay view is black by default with opacity of 0.2.
+
+Set overlayColor to `[UICColor clearColor]` to not show anything.
+
+### openOffset
+
+When open, the rootViewController will normally still be visible on the right edge of the screen. openOffset controls how far from the right edge of the screen the root view will appear.
+
+<img src="/Users/jroberts/Desktop/dh-sidebar-offset.png" alt="Open offsets" />
+
+## Contribution
+
+
+
+## Attribution
+
+Attribution is not required but we sure would love to know if you make something cool with this.
+
+## License
+
+Licensed under the MIT License.

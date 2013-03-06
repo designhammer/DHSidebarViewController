@@ -261,7 +261,7 @@
 
 - (void)hideRootViewController {
     DHSidebarLayoutView* layoutView = (DHSidebarLayoutView*)self.view;
-    [layoutView setOffset:320 animated:YES];
+    [layoutView setOffset:self.view.bounds.size.width animated:YES];
 }
 
 - (void)showRootViewController {
