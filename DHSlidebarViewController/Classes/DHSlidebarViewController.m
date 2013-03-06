@@ -59,6 +59,7 @@
     
     DHSlidebarLayoutView * layoutView = [[DHSlidebarLayoutView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
     self.view = layoutView;
+    self.overlay.frame = self.rootViewController.view.frame;
 }
 
 - (void) viewDidLoad {   
@@ -79,6 +80,20 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+    self.view.frame = [[UIScreen mainScreen] applicationFrame];
+}
+
+//-(void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+//    self.view.frame = [[UIScreen mainScreen] applicationFrame];
+//}
+//
+//-(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+//    NSLog(@"setting bounds");
+//    self.view.frame = [[UIScreen mainScreen] applicationFrame];
+//}
 
 #pragma mark - DHSlidebarViewController Public Methods
 

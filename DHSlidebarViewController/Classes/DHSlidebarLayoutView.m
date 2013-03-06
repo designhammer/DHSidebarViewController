@@ -48,21 +48,21 @@
                               delay: 0
                             options:UIViewAnimationOptionCurveEaseOut
                          animations:^{
-            rootView.frame = CGRectMake(self.offset, rootView.frame.origin.y, rootView.frame.size.width, rootView.frame.size.height);
+            rootView.frame = CGRectMake(self.offset, rootView.frame.origin.y, rootView.bounds.size.width, rootView.bounds.size.height);
 
 
             float sidebarOffset = self.offset <= _snapPosition ? self.offset : _snapPosition;
 
-            sidebarView.frame = CGRectMake(0 - _snapPosition * 0.25 + sidebarOffset * 0.25, self.bounds.origin.y, rootView.frame.size.width, self.frame.size.height);
+            sidebarView.frame = CGRectMake(0 - _snapPosition * 0.25 + sidebarOffset * 0.25, self.bounds.origin.y, rootView.bounds.size.width, self.bounds.size.height);
         }
                          completion:nil];
         
     } else {
-        rootView.frame = CGRectMake(self.offset, rootView.frame.origin.y, rootView.frame.size.width, rootView.frame.size.height);
+        rootView.frame = CGRectMake(self.offset, rootView.frame.origin.y, self.bounds.size.width, self.bounds.size.height);
         
         float sidebarOffset = self.offset <= _snapPosition ? self.offset : _snapPosition;
         
-        sidebarView.frame = CGRectMake(0 - _snapPosition * 0.25 + sidebarOffset * 0.25, self.bounds.origin.y, rootView.frame.size.width, self.frame.size.height);
+        sidebarView.frame = CGRectMake(0 - _snapPosition * 0.25 + sidebarOffset * 0.25, self.bounds.origin.y, rootView.bounds.size.width, self.bounds.size.height);
 
     }
 }
