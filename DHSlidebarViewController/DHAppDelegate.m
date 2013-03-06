@@ -7,14 +7,23 @@
 //
 
 #import "DHAppDelegate.h"
+#import "DHSlidebarViewController.h"
 
 @implementation DHAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+
+    UIStoryboard* mainStoryboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
+    UIViewController* rootViewController = [mainStoryboard instantiateInitialViewController];
+    UIViewController* sidebarViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"SidebarViewController"];
+
+    DHSlidebarViewController* slidebarVC = [[DHSlidebarViewController alloc] initWithRootViewController:rootViewController
+                                                                                  sidebarViewController:sidebarViewController];
+    
+    self.window.rootViewController = slidebarVC;
+
     [self.window makeKeyAndVisible];
     return YES;
 }

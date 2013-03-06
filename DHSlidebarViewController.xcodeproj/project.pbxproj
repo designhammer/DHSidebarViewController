@@ -16,6 +16,9 @@
 		A5E778E716E7A61300AEF8C2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A5E778E616E7A61300AEF8C2 /* Default.png */; };
 		A5E778E916E7A61300AEF8C2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5E778E816E7A61300AEF8C2 /* Default@2x.png */; };
 		A5E778EB16E7A61300AEF8C2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5E778EA16E7A61300AEF8C2 /* Default-568h@2x.png */; };
+		A5E778F616E7A84D00AEF8C2 /* DHSlidebarLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E778F316E7A84D00AEF8C2 /* DHSlidebarLayoutView.m */; };
+		A5E778F716E7A84D00AEF8C2 /* DHSlidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E778F516E7A84D00AEF8C2 /* DHSlidebarViewController.m */; };
+		A5E778FA16E7A90300AEF8C2 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5E778F916E7A90300AEF8C2 /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,11 @@
 		A5E778E616E7A61300AEF8C2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		A5E778E816E7A61300AEF8C2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A5E778EA16E7A61300AEF8C2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		A5E778F216E7A84D00AEF8C2 /* DHSlidebarLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSlidebarLayoutView.h; sourceTree = "<group>"; };
+		A5E778F316E7A84D00AEF8C2 /* DHSlidebarLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSlidebarLayoutView.m; sourceTree = "<group>"; };
+		A5E778F416E7A84D00AEF8C2 /* DHSlidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSlidebarViewController.h; sourceTree = "<group>"; };
+		A5E778F516E7A84D00AEF8C2 /* DHSlidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSlidebarViewController.m; sourceTree = "<group>"; };
+		A5E778F916E7A90300AEF8C2 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,8 @@
 		A5E778DA16E7A61300AEF8C2 /* DHSlidebarViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A5E778F816E7A8F700AEF8C2 /* Resources */,
+				A5E778F116E7A84D00AEF8C2 /* Classes */,
 				A5E778E316E7A61300AEF8C2 /* DHAppDelegate.h */,
 				A5E778E416E7A61300AEF8C2 /* DHAppDelegate.m */,
 				A5E778DB16E7A61300AEF8C2 /* Supporting Files */,
@@ -97,6 +107,25 @@
 				A5E778EA16E7A61300AEF8C2 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A5E778F116E7A84D00AEF8C2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A5E778F216E7A84D00AEF8C2 /* DHSlidebarLayoutView.h */,
+				A5E778F316E7A84D00AEF8C2 /* DHSlidebarLayoutView.m */,
+				A5E778F416E7A84D00AEF8C2 /* DHSlidebarViewController.h */,
+				A5E778F516E7A84D00AEF8C2 /* DHSlidebarViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A5E778F816E7A8F700AEF8C2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A5E778F916E7A90300AEF8C2 /* Storyboard.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +184,7 @@
 				A5E778E716E7A61300AEF8C2 /* Default.png in Resources */,
 				A5E778E916E7A61300AEF8C2 /* Default@2x.png in Resources */,
 				A5E778EB16E7A61300AEF8C2 /* Default-568h@2x.png in Resources */,
+				A5E778FA16E7A90300AEF8C2 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +197,8 @@
 			files = (
 				A5E778E116E7A61300AEF8C2 /* main.m in Sources */,
 				A5E778E516E7A61300AEF8C2 /* DHAppDelegate.m in Sources */,
+				A5E778F616E7A84D00AEF8C2 /* DHSlidebarLayoutView.m in Sources */,
+				A5E778F716E7A84D00AEF8C2 /* DHSlidebarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +228,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -227,6 +260,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
