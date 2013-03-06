@@ -22,14 +22,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A5E778D116E7A61300AEF8C2 /* DHSlidebarViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DHSlidebarViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5E778D116E7A61300AEF8C2 /* DHSidebarViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DHSidebarViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E778D416E7A61300AEF8C2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A5E778D616E7A61300AEF8C2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A5E778D816E7A61300AEF8C2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		A5E778DC16E7A61300AEF8C2 /* DHSlidebarViewController-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DHSlidebarViewController-Info.plist"; sourceTree = "<group>"; };
+		A5E778DC16E7A61300AEF8C2 /* DHSidebarViewController-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DHSidebarViewController-Info.plist"; sourceTree = "<group>"; };
 		A5E778DE16E7A61300AEF8C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A5E778E016E7A61300AEF8C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A5E778E216E7A61300AEF8C2 /* DHSlidebarViewController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DHSlidebarViewController-Prefix.pch"; sourceTree = "<group>"; };
+		A5E778E216E7A61300AEF8C2 /* DHSidebarViewController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DHSidebarViewController-Prefix.pch"; sourceTree = "<group>"; };
 		A5E778E316E7A61300AEF8C2 /* DHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHAppDelegate.h; sourceTree = "<group>"; };
 		A5E778E416E7A61300AEF8C2 /* DHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHAppDelegate.m; sourceTree = "<group>"; };
 		A5E778E616E7A61300AEF8C2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 		A5E778C816E7A61300AEF8C2 = {
 			isa = PBXGroup;
 			children = (
-				A5E778DA16E7A61300AEF8C2 /* DHSlidebarViewController */,
+				A5E778DA16E7A61300AEF8C2 /* DHSidebarViewController */,
 				A5E778D316E7A61300AEF8C2 /* Frameworks */,
 				A5E778D216E7A61300AEF8C2 /* Products */,
 			);
@@ -68,7 +68,7 @@
 		A5E778D216E7A61300AEF8C2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A5E778D116E7A61300AEF8C2 /* DHSlidebarViewController.app */,
+				A5E778D116E7A61300AEF8C2 /* DHSidebarViewController.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,7 +83,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A5E778DA16E7A61300AEF8C2 /* DHSlidebarViewController */ = {
+		A5E778DA16E7A61300AEF8C2 /* DHSidebarViewController */ = {
 			isa = PBXGroup;
 			children = (
 				A5E778F816E7A8F700AEF8C2 /* Resources */,
@@ -92,16 +92,16 @@
 				A5E778E416E7A61300AEF8C2 /* DHAppDelegate.m */,
 				A5E778DB16E7A61300AEF8C2 /* Supporting Files */,
 			);
-			path = DHSlidebarViewController;
+			path = DHSidebarViewController;
 			sourceTree = "<group>";
 		};
 		A5E778DB16E7A61300AEF8C2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A5E778DC16E7A61300AEF8C2 /* DHSlidebarViewController-Info.plist */,
+				A5E778DC16E7A61300AEF8C2 /* DHSidebarViewController-Info.plist */,
 				A5E778DD16E7A61300AEF8C2 /* InfoPlist.strings */,
 				A5E778E016E7A61300AEF8C2 /* main.m */,
-				A5E778E216E7A61300AEF8C2 /* DHSlidebarViewController-Prefix.pch */,
+				A5E778E216E7A61300AEF8C2 /* DHSidebarViewController-Prefix.pch */,
 				A5E778E616E7A61300AEF8C2 /* Default.png */,
 				A5E778E816E7A61300AEF8C2 /* Default@2x.png */,
 				A5E778EA16E7A61300AEF8C2 /* Default-568h@2x.png */,
@@ -131,9 +131,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A5E778D016E7A61300AEF8C2 /* DHSlidebarViewController */ = {
+		A5E778D016E7A61300AEF8C2 /* DHSidebarViewController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A5E778EE16E7A61300AEF8C2 /* Build configuration list for PBXNativeTarget "DHSlidebarViewController" */;
+			buildConfigurationList = A5E778EE16E7A61300AEF8C2 /* Build configuration list for PBXNativeTarget "DHSidebarViewController" */;
 			buildPhases = (
 				A5E778CD16E7A61300AEF8C2 /* Sources */,
 				A5E778CE16E7A61300AEF8C2 /* Frameworks */,
@@ -143,9 +143,9 @@
 			);
 			dependencies = (
 			);
-			name = DHSlidebarViewController;
-			productName = DHSlidebarViewController;
-			productReference = A5E778D116E7A61300AEF8C2 /* DHSlidebarViewController.app */;
+			name = DHSidebarViewController;
+			productName = DHSidebarViewController;
+			productReference = A5E778D116E7A61300AEF8C2 /* DHSidebarViewController.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -158,7 +158,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = DesignHammer;
 			};
-			buildConfigurationList = A5E778CC16E7A61300AEF8C2 /* Build configuration list for PBXProject "DHSlidebarViewController" */;
+			buildConfigurationList = A5E778CC16E7A61300AEF8C2 /* Build configuration list for PBXProject "DHSidebarViewController" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -170,7 +170,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A5E778D016E7A61300AEF8C2 /* DHSlidebarViewController */,
+				A5E778D016E7A61300AEF8C2 /* DHSidebarViewController */,
 			);
 		};
 /* End PBXProject section */
@@ -278,8 +278,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DHSlidebarViewController/DHSlidebarViewController-Prefix.pch";
-				INFOPLIST_FILE = "DHSlidebarViewController/DHSlidebarViewController-Info.plist";
+				GCC_PREFIX_HEADER = "DHSidebarViewController/DHSidebarViewController-Prefix.pch";
+				INFOPLIST_FILE = "DHSidebarViewController/DHSidebarViewController-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -289,8 +289,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DHSlidebarViewController/DHSlidebarViewController-Prefix.pch";
-				INFOPLIST_FILE = "DHSlidebarViewController/DHSlidebarViewController-Info.plist";
+				GCC_PREFIX_HEADER = "DHSidebarViewController/DHSidebarViewController-Prefix.pch";
+				INFOPLIST_FILE = "DHSidebarViewController/DHSidebarViewController-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -299,7 +299,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A5E778CC16E7A61300AEF8C2 /* Build configuration list for PBXProject "DHSlidebarViewController" */ = {
+		A5E778CC16E7A61300AEF8C2 /* Build configuration list for PBXProject "DHSidebarViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A5E778EC16E7A61300AEF8C2 /* Debug */,
@@ -308,7 +308,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A5E778EE16E7A61300AEF8C2 /* Build configuration list for PBXNativeTarget "DHSlidebarViewController" */ = {
+		A5E778EE16E7A61300AEF8C2 /* Build configuration list for PBXNativeTarget "DHSidebarViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A5E778EF16E7A61300AEF8C2 /* Debug */,

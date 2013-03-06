@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A5E778D016E7A61300AEF8C2"
-            BuildableName = "DHSlidebarViewController.app"
-            BlueprintName = "DHSlidebarViewController"
-            ReferencedContainer = "container:DHSlidebarViewController.xcodeproj">
+            BuildableName = "DHSidebarViewController.app"
+            BlueprintName = "DHSidebarViewController"
+            ReferencedContainer = "container:DHSidebarViewController.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A5E778D016E7A61300AEF8C2"
-            BuildableName = "DHSlidebarViewController.app"
-            BlueprintName = "DHSlidebarViewController"
-            ReferencedContainer = "container:DHSlidebarViewController.xcodeproj">
+            BuildableName = "DHSidebarViewController.app"
+            BlueprintName = "DHSidebarViewController"
+            ReferencedContainer = "container:DHSidebarViewController.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
