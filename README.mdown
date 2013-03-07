@@ -12,6 +12,11 @@ It was created by [DesignHammer](http://www.designhammer.com) for the app ExTime
 
 <img src="/Users/jroberts/Desktop/dh-sidebar-example.png" alt="The Sidebar in action" />
 
+## Requirements
+
+- iOS 5.0+
+- Xcode 4.2.1+ (for ARC support)
+
 ## Usage
 
 Create a new DHSidebarViewController and pass in a view controller for the root and one for the sidebar. Then, set it as your application's window's rootViewController.
