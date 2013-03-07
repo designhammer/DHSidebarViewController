@@ -68,13 +68,15 @@ When the sidebar controller is open (the sidebar is showing) an overlay view is 
 
 overlayColor determines the color of this view and overlayOpacity determines it's alpha level when shown. The sidebar controller will animate the opacity as needed.
 
-The overlay view is black by default with opacity of 0.2.
+Default is black with an opacity of 0.2.
 
 Set overlayColor to `[UICColor clearColor]` to not show anything.
 
 ### openOffset
 
 When open, the rootViewController will normally still be visible on the right edge of the screen. openOffset controls how far from the right edge of the screen the root view will appear.
+
+Default is 55.
 
 <img src="/Users/jroberts/Desktop/dh-sidebar-offset.png" alt="Open offsets" />
 
