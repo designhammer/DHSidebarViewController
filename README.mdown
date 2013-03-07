@@ -15,7 +15,7 @@ It was created by [DesignHammer](http://www.designhammer.com) for the app ExTime
 ## Requirements
 
 - iOS 5.0+
-- Xcode 4.2.1+ (for ARC support)
+- Xcode 4.4+ (for ARC support and auto-synthesis)
 
 ## Usage
 
