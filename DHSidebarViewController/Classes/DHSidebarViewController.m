@@ -82,19 +82,11 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
-    self.view.frame = [[UIScreen mainScreen] applicationFrame];
-}
-
-//-(void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-//    self.view.frame = [[UIScreen mainScreen] applicationFrame];
-//}
-
 -(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
     DHSidebarLayoutView* layoutView = (DHSidebarLayoutView*)self.view;
-    layoutView.frame = [[UIScreen mainScreen] applicationFrame];
     layoutView.snapPosition = self.view.bounds.size.width - self.openOffset;
+    self.overlay.frame = layoutView.bounds;
+    
     if ([self isOpen]) {
         [self openSidebar];
     }
