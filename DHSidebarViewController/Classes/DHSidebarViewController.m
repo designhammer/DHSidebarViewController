@@ -117,14 +117,14 @@
     // Assign new controller
     UIViewController * oldRootViewController = _rootViewController;
     [oldRootViewController willMoveToParentViewController:nil];
-    [oldRootViewController.view removeFromSuperview];
-    [oldRootViewController removeFromParentViewController];
     
     _rootViewController = rootViewController;
     UIViewController * newRootViewController = rootViewController;
     
     [self addChildViewController:newRootViewController];
-    newRootViewController.view.frame = self.view.bounds;
+    
+    // Make sure the new root view has the same horizontal position as the old one
+    newRootViewController.view.frame = CGRectMake(oldRootViewController.view.frame.origin.x, oldRootViewController.view.frame.origin.y, self.view.bounds.size.width, self.view.bounds.size.height);
     
     // Set up tag for later retrieval
     newRootViewController.view.tag = kViewTagRoot;
@@ -143,12 +143,18 @@
     if (self.overlay != nil) {
         [self.overlay removeFromSuperview];
     }
-    self.overlay = [[UIView alloc] initWithFrame:newRootViewController.view.frame];
+    self.overlay = [[UIView alloc] initWithFrame:newRootViewController.view.bounds];
     self.overlay.backgroundColor = self.overlayColor;
     self.overlay.alpha = 0;
-    
-    // Create tap gesture reconizer for closing the rootView
+
+    // Create tap gesture recognizer for closing the rootView
     self.tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
+
+    if ([self isOpen]) {
+        self.overlay.alpha = self.overlayOpacity;
+        [self.rootViewController.view addSubview:self.overlay];
+        [self.rootViewController.view addGestureRecognizer:self.tapGR];
+    }    
     
     if (!oldRootViewController) {
         [self.view addSubview:_rootViewController.view];
@@ -162,6 +168,8 @@
                                     
                                 }
                                 completion:^(BOOL completion) {
+                                    [self.view addSubview:_rootViewController.view];
+                                    [oldRootViewController removeFromParentViewController];
                                     [newRootViewController didMoveToParentViewController:self];
                                 }
          ];
@@ -176,14 +184,14 @@
     
     UIViewController * oldSidebarViewController = _sidebarViewController;
     [oldSidebarViewController willMoveToParentViewController:nil];
-    [oldSidebarViewController.view removeFromSuperview];
-    [oldSidebarViewController removeFromParentViewController];
 
     _sidebarViewController = sidebarViewController;
     UIViewController * newSidebarViewController = sidebarViewController;
     newSidebarViewController.view.frame = self.view.bounds;
     sidebarViewController.view.tag = kViewTagSidebar;
 
+    [self addChildViewController:newSidebarViewController];
+    
     // Set gesture recognizer
     if (!oldSidebarViewController) {
         [self.view insertSubview:_sidebarViewController.view atIndex:0];
@@ -197,6 +205,8 @@
                                     
                                 }
                                 completion:^(BOOL completion) {
+                                    [self.view insertSubview:_sidebarViewController.view atIndex:0];
+                                    [oldSidebarViewController removeFromParentViewController];
                                     [newSidebarViewController didMoveToParentViewController:self];
                                 }
          ];
