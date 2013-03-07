@@ -2,7 +2,7 @@
 
 DHSidebarViewController is a sidebar navigation controller for iOS which supports responsive sliding gestures and custom views.
 
-It presents a root view controller which can be slid to the right by the user to display a sidebar view underneath. The sliding can be performed by a responsive pan gesture or by calling a method on the sidebar controller.
+It presents a root view controller which can be slid to the right by the user to display a sidebar underneath. The sliding can be performed by a responsive pan gesture or by calling a method on the sidebar controller.
 
 The root and sidebar view controllers can be any view controllers you want. You aren't limited to a table view in the sidebar, for example. 
 
@@ -14,7 +14,9 @@ It was created by [DesignHammer](http://www.designhammer.com) for the app ExTime
 
 ## Usage
 
-The DHSidebarViewController is intended to be the rootViewController of your application. Create it in applicationDidFinishLaunching and pass it a sidebarViewController and a rootViewController.
+Create a new DHSidebarViewController and pass in a view controller for the root and one for the sidebar. Then, set it as your application's window's rootViewController.
+
+Here's an example in applicationDidFinishLaunching:
 
     UIStoryboard* mainStoryboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
     UIViewController* rootViewController = [mainStoryboard instantiateInitialViewController];
@@ -25,7 +27,7 @@ The DHSidebarViewController is intended to be the rootViewController of your app
     self.window.rootViewController = sidebarVC;
 
 
-
+You can change the rootViewController or the sidebarViewController at any time.
 
 ## Opening and Closing the sidebar
 
