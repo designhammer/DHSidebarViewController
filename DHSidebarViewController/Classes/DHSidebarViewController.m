@@ -71,31 +71,17 @@
 #pragma mark - View lifecycle
 
 - (void) loadView {
-    
     [super loadView];
     
     DHSidebarLayoutView * layoutView = [[DHSidebarLayoutView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
     self.view = layoutView;
-    self.overlay.frame = self.rootViewController.view.frame;
+    self.overlay.frame = [[UIScreen mainScreen] applicationFrame];
 }
 
-- (void) viewDidLoad {   
-    [super viewDidLoad];
-}
+#pragma mark - Rotation
 
-- (void) viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return [_rootViewController shouldAutorotateToInterfaceOrientation:interfaceOrientation];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 -(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
@@ -123,8 +109,8 @@
 }
 
 - (void)setRootViewController:(UIViewController *)rootViewController {
-    // Bail if null
-    if (!rootViewController)  {
+    if (rootViewController == nil)  {
+        NSLog(@"Application tried to set a nil root view controller on target %@", self);
         return;
     }
     
@@ -142,7 +128,6 @@
     
     // Set up tag for later retrieval
     newRootViewController.view.tag = kViewTagRoot;
-
     
     // Add left side drop shadow
     newRootViewController.view.layer.shadowOffset = CGSizeMake(-3, 0);
@@ -184,7 +169,8 @@
 }
 
 - (void)setSidebarViewController:(UIViewController *)sidebarViewController {
-    if (!sidebarViewController)  {
+    if (sidebarViewController == nil)  {
+        NSLog(@"Application tried to set a nil sidebar view controller on target %@", self);
         return;
     }
     
@@ -219,7 +205,7 @@
 
 - (void)toggleSidebar {
     if (_sliding) {
-        // Wait until open/close movement finsihes before allowing the state to be toggled
+        // Wait until open/close movement finishes before allowing the state to be toggled
         return;
     }
     DHSidebarLayoutView* layoutView = (DHSidebarLayoutView*)self.view;

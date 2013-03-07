@@ -20,7 +20,7 @@
     UIViewController* sidebarViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"SidebarViewController"];
 
     DHSidebarViewController* sidebarVC = [[DHSidebarViewController alloc] initWithRootViewController:rootViewController
-                                                                                  sidebarViewController:sidebarViewController];
+                                                                               sidebarViewController:sidebarViewController];
     
     self.window.rootViewController = sidebarVC;
 

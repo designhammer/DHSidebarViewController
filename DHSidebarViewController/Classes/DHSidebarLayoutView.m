@@ -29,14 +29,17 @@
 
 @implementation DHSidebarLayoutView
 
+#pragma mark - Initialization
+
 - (id)initWithFrame:(CGRect)frame {
     if ( (self = [super initWithFrame:frame]) ) {
-        // Initialization code
         _offset = 0.0f;
         _snapPosition = 265.0f;
     }
     return self;
 }
+
+#pragma mark - View Positioning
 
 - (void)setOffset:(float)offset {
     [self setOffset:offset animated:NO];
@@ -55,6 +58,7 @@
     }
 }
 
+// Sets the frames for the Root and Sidebar views based on the current _offset.
 - (void)adjustSubviewFramesAnimated:(BOOL)animated {
     UIView* rootView = [self viewWithTag:kViewTagRoot];
     UIView* sidebarView = [self viewWithTag:kViewTagSidebar];
