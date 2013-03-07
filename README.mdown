@@ -1,11 +1,16 @@
 # DHSidebarViewController
 
-DHSidebarViewController is sidebar navigation controller for iOS which supports responsive sliding gestures and custom views.
+DHSidebarViewController is a sidebar navigation controller for iOS which supports responsive sliding gestures and custom views.
 
 It presents a root view controller which can be slid to the right by the user to display a sidebar view underneath. The sliding can be performed by a responsive pan gesture or by calling a method on the sidebar controller.
 
-<img src="/Users/jroberts/Desktop/dh-sidebar-example.png" alt="The Sidebar in action" />
+The root and sidebar view controllers can be any view controllers you want. You aren't limited to a table view in the sidebar, for example. 
 
+DHSidebarViewController operates according to [Apple's guidelines for Custom Container View Controllers](http://developer.apple.com/library/ios/#featuredarticles/ViewControllerPGforiPhoneOS/CreatingCustomContainerViewControllers/CreatingCustomContainerViewControllers.html).
+
+It was created by [DesignHammer](http://www.designhammer.com) for the app ExTimer.
+
+<img src="/Users/jroberts/Desktop/dh-sidebar-example.png" alt="The Sidebar in action" />
 
 ## Usage
 
@@ -82,7 +87,13 @@ Default is 55.
 
 ## Contribution
 
+Contributions are welcome.
 
+1. Fork it.
+2. Create a branch (git checkout -b my_markup)
+3. Commit your changes (git commit -am "Fixed all the bugs")
+4. Push to the branch (git push origin my_markup)
+5. Open a Pull Request
 
 ## Attribution
 
