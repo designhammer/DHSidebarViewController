@@ -68,22 +68,16 @@
                               delay: 0
                             options:UIViewAnimationOptionCurveEaseOut
                          animations:^{
-            rootView.frame = CGRectMake(self.offset, rootView.frame.origin.y, rootView.bounds.size.width, rootView.bounds.size.height);
-
-
+            rootView.center = CGPointMake(self.offset + rootView.frame.size.width / 2, rootView.center.y);
             float sidebarOffset = self.offset <= _snapPosition ? self.offset : _snapPosition;
-
-            sidebarView.frame = CGRectMake(0 - _snapPosition * 0.25 + sidebarOffset * 0.25, self.bounds.origin.y, rootView.bounds.size.width, self.bounds.size.height);
+            sidebarView.center = CGPointMake(0 - _snapPosition * 0.25 + sidebarOffset * 0.25 + sidebarView.frame.size.width / 2, sidebarView.center.y);
         }
                          completion:nil];
         
     } else {
-        rootView.frame = CGRectMake(self.offset, rootView.frame.origin.y, self.bounds.size.width, self.bounds.size.height);
-        
+        rootView.center = CGPointMake(self.offset + rootView.frame.size.width / 2, rootView.center.y);
         float sidebarOffset = self.offset <= _snapPosition ? self.offset : _snapPosition;
-        
-        sidebarView.frame = CGRectMake(0 - _snapPosition * 0.25 + sidebarOffset * 0.25, self.bounds.origin.y, rootView.bounds.size.width, self.bounds.size.height);
-
+        sidebarView.center = CGPointMake(0 - _snapPosition * 0.25 + sidebarOffset * 0.25 + sidebarView.frame.size.width / 2, sidebarView.center.y);
     }
 }
 
