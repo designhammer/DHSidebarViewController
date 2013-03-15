@@ -54,7 +54,7 @@
     if (animated) {
         [self adjustSubviewFramesAnimated:YES];
     } else {
-        [self setNeedsLayout];
+        [self adjustSubviewFramesAnimated:NO];
     }
 }
 
@@ -85,11 +85,6 @@
         sidebarView.frame = CGRectMake(0 - _snapPosition * 0.25 + sidebarOffset * 0.25, self.bounds.origin.y, rootView.bounds.size.width, self.bounds.size.height);
 
     }
-}
-
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    [self adjustSubviewFramesAnimated:NO];
 }
 
 @end
