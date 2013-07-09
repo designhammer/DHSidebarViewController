@@ -8,9 +8,9 @@ The root and sidebar view controllers can be any view controllers you want. You 
 
 DHSidebarViewController operates according to [Apple's guidelines for Custom Container View Controllers](http://developer.apple.com/library/ios/#featuredarticles/ViewControllerPGforiPhoneOS/CreatingCustomContainerViewControllers/CreatingCustomContainerViewControllers.html).
 
-It was created by [DesignHammer](http://www.designhammer.com) for the app ExTimer.
+It was created by [DesignHammer](http://www.designhammer.com) for the app [ExTimer](http://extimer.com).
 
-<img src="/Users/jroberts/Desktop/dh-sidebar-example.png" alt="The Sidebar in action" />
+<img src="http://extimer.com/img/github/dh-sidebar-example.png" alt="The Sidebar in action" />
 
 ## Requirements
 
@@ -42,19 +42,17 @@ The simplest approach is to add a button to the root view controller which calls
 
 If you need to explicitly set the sidebar to be open or closed you can call `openSidebar` and `closeSidebar` respectively.
 
-
 ## Hiding and showing the root view controller
 
 Typically, some part of the rootViewController will always be visible at the right edge of the screen. However, sometimes you may wish to move it completely off of the screen temporarily so the user can focus on a task in the sidebar.
 
-This is easily accomplished. Calling `showRootViewController` will move the rootViewController completely off the right edge of the screen.
+This is easily accomplished. Calling `hideRootViewController` will move the rootViewController completely off the right edge of the screen.
 
-Calling `hideRootViewController` will return it to the open position.
+Calling `showRootViewController` will return it to the open and visible position.
 
-An common use case for this would be having a tableView in the sidebar which the user can edit. When the user begins editing the tabeView call `hideRootViewController`. The user now has the full screen to work in, reorder items, etc. and is prevented from accidentally closing the sidebar.
+A common use case for this would be having a tableView in the sidebar which the user can edit. When the user begins editing the tabeView, call `hideRootViewController`. The user now has the full screen to work in, reorder items, etc. and is prevented from accidentally closing the sidebar.
 
-Then, when  he user stops editing, call `showRootViewController` to restore its original position.
-
+Then, when the user stops editing, call `showRootViewController` to restore its original position.
 
 ## Properties
 
@@ -90,7 +88,7 @@ When open, the rootViewController will normally still be visible on the right ed
 
 Default is 55.
 
-<img src="/Users/jroberts/Desktop/dh-sidebar-offset.png" alt="Open offsets" />
+<img src="http://extimer.com/img/github/dh-sidebar-offset.png" alt="Open offsets" />
 
 ## Contribution
 
