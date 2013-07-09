@@ -132,7 +132,9 @@
     // Add left side drop shadow
     newRootViewController.view.layer.shadowOffset = CGSizeMake(-3, 0);
     newRootViewController.view.layer.shadowOpacity = 0.3f;
-    
+    UIBezierPath *path = [UIBezierPath bezierPathWithRect:newRootViewController.view.bounds];
+    newRootViewController.view.layer.shadowPath = path.CGPath;
+
     // Set gesture recognizer for panning
     UIPanGestureRecognizer* panGR = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panned:)];
     panGR.delegate = self;
