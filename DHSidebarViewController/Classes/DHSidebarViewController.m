@@ -73,9 +73,9 @@
 - (void) loadView {
     [super loadView];
 
-    DHSidebarLayoutView * layoutView = [[DHSidebarLayoutView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
+    DHSidebarLayoutView * layoutView = [[DHSidebarLayoutView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.view = layoutView;
-    self.overlay.frame = [[UIScreen mainScreen] applicationFrame];
+    self.overlay.frame = [[UIScreen mainScreen] bounds];
 }
 
 #pragma mark - Rotation
